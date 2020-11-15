@@ -9,14 +9,14 @@ import { DEFAULT_TIMEOUT } from '../defaults';
   styleUrls: ['./toast.component.scss']
 })
 export class ToastComponent implements OnInit, OnDestroy {
-  @Input() public toast: Toast;
+  @Input() public toast: Toast = {} as Toast;
   @Output() private deleteToast = new EventEmitter<null>();
   private tick: SubscriptionLike;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.tick = timer(this.toast.timeout || DEFAULT_TIMEOUT).subscribe(
+    this.tick = timer(this.toast?.timeout || DEFAULT_TIMEOUT).subscribe(
       () => this.deleteToast.emit()
     );
   }
