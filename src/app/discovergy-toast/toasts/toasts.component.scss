@@ -4,6 +4,7 @@
   position: fixed;
   width: 300px;
   height: 100%;
+  z-index: 9999;
 
   &.top-left {
     top: 0;
