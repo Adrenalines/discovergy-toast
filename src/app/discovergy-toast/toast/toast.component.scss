@@ -1,7 +1,4 @@
-$SUCCESS: green;
-$WARNING: orange;
-$ERROR: red;
-$TEXT: white;
+@import '../_vars.scss';
 
 .toast-container {
   margin-top: 1rem;
