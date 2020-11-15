@@ -87,6 +87,7 @@ this.toastService.open({
 ## Demo
 
 **[Show demo](https://adrenalines.github.io/discovergy-toast/)**
+**[Show demo on Stackblitz](https://stackblitz.com/github/Adrenalines/discovergy-toast)**
 
 
 ## Development of this module

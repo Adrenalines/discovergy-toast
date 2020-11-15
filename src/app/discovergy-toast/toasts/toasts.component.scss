@@ -5,22 +5,30 @@
   width: 300px;
   height: 100%;
   z-index: 9999;
+  pointer-events: none;
+  display: flex;
 
   &.top-left {
+    flex-direction: column;
     top: 0;
     left: 1rem;
   }
 
   &.top-right {
+    flex-direction: column;
     top: 0;
     right: 1rem;
   }
 
   &.bottom-left {
+    flex-direction: column-reverse;
+    bottom: 1rem;
     left: 1rem;
   }
 
   &.bottom-right {
+    flex-direction: column-reverse;
+    bottom: 1rem;
     right: 1rem;
   }
 
