@@ -12,11 +12,11 @@ export enum ToastPositions {
   TopLeft = 'top-left',
   TopRight = 'top-right',
   BottomLeft = 'bottom-left',
-  BottomRight = 'botttom-right'
+  BottomRight = 'bottom-right'
 }
 
 export enum ToastTypes {
   Success = 'success',
   Warning = 'warning',
-  Danger = 'danger'
+  Error = 'error'
 }

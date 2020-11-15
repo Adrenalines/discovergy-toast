@@ -14,11 +14,13 @@ export class ToastService {
   ) { }
 
   public open(toast: Toast): void {
+    if (!toast.heading || !toast.message || !toast.type) {
+      return;
+    }
+
     const newToasts = this.toastListService.toasts.getValue();
     newToasts.push(toast);
     this.toastListService.toasts.next(newToasts);
-
-    console.log(this.toastLoadingService.toastsComponentRef)
 
     if (!this.toastLoadingService.toastsComponentRef) {
       this.toastLoadingService.loadComponent();

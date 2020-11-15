@@ -6,7 +6,6 @@ $TEXT: white;
 .toast-container {
   margin-top: 1rem;
   border-radius: 0.5rem;
-  background-color: $SUCCESS;
   color: $TEXT;
 
   .toast-body {
@@ -30,5 +29,17 @@ $TEXT: white;
     .toast-message {
       font-size: 0.8rem;
     }
+  }
+
+  &.success {
+    background-color: $SUCCESS;
+  }
+
+  &.warning {
+    background-color: $WARNING;
+  }
+
+  &.error {
+    background-color: $ERROR;
   }
 }

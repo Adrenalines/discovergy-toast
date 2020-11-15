@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { DEFAULT_MAX, DEFAULT_TIMEOUT } from './discovergy-toast/defaults';
+import { ToastPositions, ToastTypes } from './discovergy-toast/models';
 import { ToastService } from './discovergy-toast/services/toast.service';
-import { ToastTypes } from './discovergy-toast/models';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +9,27 @@ import { ToastTypes } from './discovergy-toast/models';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public heading = '';
+  public subheading = '';
+  public message = '';
+  public type = ToastTypes.Success;
+  public toastTypes = ToastTypes;
+  public timeout = DEFAULT_TIMEOUT;
+  public position = ToastPositions.TopRight;
+  public toastPositions = ToastPositions;
+  public max = DEFAULT_MAX;
 
   constructor(private toastService: ToastService) { }
 
   public showToast(): void {
     this.toastService.open({
-      heading: 'New heading',
-      subheading: 'New subheading',
-      message: 'New message',
-      type: ToastTypes.Success
+      heading: this.heading,
+      subheading: this.subheading,
+      message: this.message,
+      type: this.type,
+      timeout: this.timeout,
+      position: this.position,
+      max: this.max
     });
   }
 }

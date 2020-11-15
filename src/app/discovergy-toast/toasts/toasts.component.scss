@@ -16,19 +16,17 @@
   }
 
   &.bottom-left {
-    bottom: 1rem;
     left: 1rem;
   }
 
   &.bottom-right {
-    bottom: 1rem;
     right: 1rem;
   }
 
   .grouped-toasts {
     margin-top: 1rem;
     border-radius: 0.5rem;
-    background-color: $SUCCESS;
+    background-color: $GREY;
     color: $TEXT;
     cursor: pointer;
     font-weight: bold;

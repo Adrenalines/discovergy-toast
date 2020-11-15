@@ -19,6 +19,7 @@ export class ToastsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.toasts)
   }
 
   public deleteToast(): void {

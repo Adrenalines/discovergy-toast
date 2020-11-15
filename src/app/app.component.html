@@ -1,1 +1,104 @@
-<button (click)="showToast()">Show Discovergy Toast</button>
+<div class="container">
+  <div>
+    <div class="form-group">
+      <label for="heading">Heading: (*)</label>
+      <input id="heading" type="text" [(ngModel)]="heading">
+    </div>
+
+    <div class="form-group">
+      <label for="subheading">Subheading: </label>
+      <input id="subheading" type="text" [(ngModel)]="subheading">
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message: (*)</label>
+      <input id="message" type="text" [(ngModel)]="message">
+    </div>
+
+    <label>Type:</label>
+
+    <div class="form-group-radio">
+      <input
+        type="radio"
+        name="type"
+        id="success"
+        [value]="toastTypes.Success"
+        [(ngModel)]="type"
+      /><label for="success">{{ toastTypes.Success | titlecase }}</label>
+    </div>
+
+    <div class="form-group-radio">
+      <input
+        type="radio"
+        name="type"
+        id="warning"
+        [value]="toastTypes.Warning"
+        [(ngModel)]="type"
+      /><label for="warning">{{ toastTypes.Warning | titlecase }}</label>
+    </div>
+
+    <div class="form-group-radio">
+      <input
+        type="radio"
+        name="type"
+        id="error"
+        [value]="toastTypes.Error"
+        [(ngModel)]="type"
+      /><label for="error">{{ toastTypes.Error | titlecase }}</label>
+    </div>
+
+    <div class="form-group">
+      <label for="timeout">Timeout (ms): </label>
+      <input id="timeout" type="number" [(ngModel)]="timeout">
+    </div>
+
+    <label>Position:</label>
+
+    <div class="form-group-radio">
+      <input
+        type="radio"
+        name="position"
+        id="top-left"
+        [value]="toastPositions.TopLeft"
+        [(ngModel)]="position"
+      /><label for="top-left">{{ toastPositions.TopLeft | titlecase }}</label>
+    </div>
+
+    <div class="form-group-radio">
+      <input
+        type="radio"
+        name="position"
+        id="top-right"
+        [value]="toastPositions.TopRight"
+        [(ngModel)]="position"
+      /><label for="top-right">{{ toastPositions.TopRight | titlecase }}</label>
+    </div>
+
+    <div class="form-group-radio">
+      <input
+        type="radio"
+        name="position"
+        id="bottom-left"
+        [value]="toastPositions.BottomLeft"
+        [(ngModel)]="position"
+      /><label for="bottom-left">{{ toastPositions.BottomLeft | titlecase }}</label>
+    </div>
+
+    <div class="form-group-radio">
+      <input
+        type="radio"
+        name="position"
+        id="bottom-right"
+        [value]="toastPositions.BottomRight"
+        [(ngModel)]="position"
+      /><label for="bottom-right">{{ toastPositions.BottomRight | titlecase }}</label>
+    </div>
+
+    <div class="form-group">
+      <label for="max">Maximum number of notifications: </label>
+      <input id="max" type="number" [(ngModel)]="max">
+    </div>
+
+    <button (click)="showToast()">Show Discovergy Toast</button>
+  </div>
+</div>

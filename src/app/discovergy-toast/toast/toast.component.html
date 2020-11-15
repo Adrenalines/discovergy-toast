@@ -1,4 +1,4 @@
-<div *ngIf="toast.heading" class="toast-container">
+<div *ngIf="toast.heading" [ngClass]="['toast-container', toast.type]">
   <div class="toast-body">
     <div class="toast-text toast-heading">{{ toast.heading }}</div>
     <div *ngIf="toast.subheading" class="toast-text toast-subheading">{{ toast.subheading }}</div>

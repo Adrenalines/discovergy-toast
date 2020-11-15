@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 import { DiscovergyToastModule } from './discovergy-toast/discovergy-toast.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,8 @@ import { DiscovergyToastModule } from './discovergy-toast/discovergy-toast.modul
   ],
   imports: [
     BrowserModule,
-    DiscovergyToastModule
+    DiscovergyToastModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
