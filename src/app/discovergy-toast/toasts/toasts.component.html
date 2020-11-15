@@ -1,0 +1,17 @@
+<div
+  *ngIf="toasts | async as toasts"
+  [ngClass]="['toasts-container', position]"
+  class="toasts-container"
+  [className]="'toasts-container' + position"
+>
+  <div *ngFor="let toast of toasts | slice:0:maxCount">
+    <app-toast [toast]="toast" (deleteToast)="deleteToast()"></app-toast>
+  </div>
+  <div
+    *ngIf="toasts.length > maxCount"
+    (click)="maxCount = toasts.length"
+    class="grouped-toasts"
+  >
+    Other toasts: {{ toasts.length - maxCount }}
+  </div>
+</div>

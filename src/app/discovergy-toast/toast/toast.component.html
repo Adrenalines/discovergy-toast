@@ -1,18 +1,7 @@
-<div class="toasts-container">
-  <div *ngFor="let toast of toasts | slice:0:maxToastsCount">
-    <div class="toast-container">
-      <div class="toast-body">
-        <div class="toast-text toast-heading">{{ toast.heading }}</div>
-        <div *ngIf="toast.subheading" class="toast-text toast-subheading">{{ toast.subheading }}</div>
-        <div class="toast-text toast-message">{{ toast.message }}</div>
-      </div>
-    </div>
-  </div>
-  <div
-    *ngIf="toasts.length > maxToastsCount"
-    (click)="maxToastsCount = toasts.length"
-    class="toast-container grouped-toasts"
-  >
-    Other toasts: {{ toasts.length - maxToastsCount }}
+<div *ngIf="toast.heading" class="toast-container">
+  <div class="toast-body">
+    <div class="toast-text toast-heading">{{ toast.heading }}</div>
+    <div *ngIf="toast.subheading" class="toast-text toast-subheading">{{ toast.subheading }}</div>
+    <div class="toast-text toast-message">{{ toast.message }}</div>
   </div>
 </div>

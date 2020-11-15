@@ -1,0 +1,38 @@
+@import '~src/app/discovergy-toast/_vars.scss';
+
+.toasts-container {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+
+  &.top-left {
+    top: 0;
+    left: 1rem;
+  }
+
+  &.top-right {
+    top: 0;
+    right: 1rem;
+  }
+
+  &.bottom-left {
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  &.bottom-right {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+.grouped-toasts {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background-color: $SUCCESS;
+  color: $TEXT;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
