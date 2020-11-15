@@ -2,7 +2,6 @@
   *ngIf="toasts | async as toasts"
   [ngClass]="['toasts-container', position]"
   class="toasts-container"
-  [className]="'toasts-container' + position"
 >
   <div *ngFor="let toast of toasts | slice:0:maxCount">
     <app-toast [toast]="toast" (deleteToast)="deleteToast()"></app-toast>

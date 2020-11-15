@@ -8,27 +8,27 @@ $TEXT: white;
   border-radius: 0.5rem;
   background-color: $SUCCESS;
   color: $TEXT;
-}
 
-.toast-body {
-  padding: 1rem;
-  white-space: nowrap;
-}
+  .toast-body {
+    padding: 1rem;
+    white-space: nowrap;
 
-.toast-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+    .toast-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-.toast-heading {
-  font-weight: bold;
-}
+    .toast-heading {
+      font-weight: bold;
+    }
 
-.toast-subheading {
-  font-weight: bold;
-  font-size: 0.8rem;
-}
+    .toast-subheading {
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
 
-.toast-message {
-  font-size: 0.8rem;
+    .toast-message {
+      font-size: 0.8rem;
+    }
+  }
 }
