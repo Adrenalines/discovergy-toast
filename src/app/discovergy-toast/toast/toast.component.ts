@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import {SubscriptionLike, timer } from 'rxjs';
+import { SubscriptionLike, timer } from 'rxjs';
 import { Toast } from '../models';
+import { DEFAULT_TIMEOUT } from '../defaults';
 
 @Component({
   selector: 'app-toast',
@@ -10,13 +11,12 @@ import { Toast } from '../models';
 export class ToastComponent implements OnInit, OnDestroy {
   @Input() public toast: Toast;
   @Output() private deleteToast = new EventEmitter<null>();
-  private timeout = 5000;
   private tick: SubscriptionLike;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.tick = timer(this.timeout).subscribe(
+    this.tick = timer(this.toast.timeout || DEFAULT_TIMEOUT).subscribe(
       () => this.deleteToast.emit()
     );
   }

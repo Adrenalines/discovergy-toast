@@ -7,7 +7,7 @@ import { ToastComponent } from './toast/toast.component';
 
 @NgModule({
   declarations: [ ToastsComponent, ToastComponent ],
-  exports: [
+  entryComponents: [
     ToastsComponent
   ],
   imports: [

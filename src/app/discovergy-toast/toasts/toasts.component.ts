@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, SubscriptionLike } from 'rxjs';
-import { Toast, ToastPositions } from '../models';
-import { toastsStub } from '../stub';
+import { BehaviorSubject } from 'rxjs';
+import { Toast } from '../models';
+import { DEFAULT_MAX, DEFAULT_POSITION } from '../defaults';
+import { ToastListService } from '../services/toast-list.service';
 
 @Component({
   selector: 'app-toasts',
@@ -9,19 +10,19 @@ import { toastsStub } from '../stub';
   styleUrls: ['./toasts.component.scss']
 })
 export class ToastsComponent implements OnInit {
-  public toasts: BehaviorSubject<Toast[]> = new BehaviorSubject(toastsStub);
-  public position = ToastPositions.TopRight;
-  public maxCount = 5;
+  public toasts: BehaviorSubject<Toast[]>;
+  public defaultPosition = DEFAULT_POSITION;
+  public defaultMax = DEFAULT_MAX;
 
-  constructor() { }
+  constructor(private toastListService: ToastListService) {
+    this.toasts = this.toastListService.toasts;
+  }
 
   ngOnInit(): void {
   }
 
   public deleteToast(): void {
-    const newToasts = this.toasts.getValue();
-    newToasts.shift();
-    this.toasts.next(newToasts);
+    this.toastListService.deleteToast();
   }
 
 }

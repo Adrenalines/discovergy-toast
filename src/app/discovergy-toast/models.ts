@@ -1,7 +1,11 @@
 export interface Toast {
   heading: string;
-  subheading: string;
+  subheading?: string;
   message: string;
+  type: ToastTypes;
+  timeout?: number;
+  position?: ToastPositions;
+  max?: number;
 }
 
 export enum ToastPositions {
@@ -9,4 +13,10 @@ export enum ToastPositions {
   TopRight = 'top-right',
   BottomLeft = 'bottom-left',
   BottomRight = 'botttom-right'
+}
+
+export enum ToastTypes {
+  Success = 'success',
+  Warning = 'warning',
+  Danger = 'danger'
 }
