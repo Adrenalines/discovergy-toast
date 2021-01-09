@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { DEFAULT_MAX, DEFAULT_TIMEOUT } from './discovergy-toast/defaults';
-import { ToastPositions, ToastTypes } from './discovergy-toast/models';
-import { ToastService } from './discovergy-toast/services/toast.service';
+import { DEFAULT_MAX, DEFAULT_TIMEOUT } from './ng-simple-toast/defaults';
+import { ToastPositions, ToastTypes } from './ng-simple-toast/models';
+import { ToastService } from './ng-simple-toast/services/toast.service';
 
 @Component({
   selector: 'app-root',

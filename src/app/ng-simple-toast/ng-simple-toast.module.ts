@@ -14,4 +14,4 @@ import { ToastComponent } from './toast/toast.component';
     CommonModule
   ]
 })
-export class DiscovergyToastModule { }
+export class NgSimpleToastModule { }

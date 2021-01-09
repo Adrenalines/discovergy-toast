@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DiscovergyToastModule } from './discovergy-toast/discovergy-toast.module';
+import { NgSimpleToastModule } from './ng-simple-toast/ng-simple-toast.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    DiscovergyToastModule,
+    NgSimpleToastModule,
     FormsModule
   ],
   providers: [],

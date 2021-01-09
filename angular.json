@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "discovergy-toast": {
+    "ng-simple-toast": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/discovergy-toast",
+            "outputPath": "dist/ng-simple-toast",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "discovergy-toast:build"
+            "browserTarget": "ng-simple-toast:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "discovergy-toast:build:production"
+              "browserTarget": "ng-simple-toast:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "discovergy-toast:build"
+            "browserTarget": "ng-simple-toast:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "discovergy-toast:serve"
+            "devServerTarget": "ng-simple-toast:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "discovergy-toast:serve:production"
+              "devServerTarget": "ng-simple-toast:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "discovergy-toast"
+  "defaultProject": "ng-simple-toast"
 }

@@ -1,18 +1,18 @@
-# Discovergy Toast
+# Ng Simple Toast
 
 Simple Angular Toast Notification Module
 
 ## Usage
 
-1. Add `discovergy-toast` folder to your project.
+1. Add `ng-simple-toast` folder to your project.
 
-2. Import `DiscovergyToastModule`:
+2. Import `NgSimpleToastModule`:
     ```typescript
-    import { DiscovergyToastModule } from './discovergy-toast/discovergy-toast.module';
+    import { NgSimpleToastModule } from './ng-simple-toast/ng-simple-toast.module';
     
     @NgModule({
       imports: [
-        DiscovergyToastModule
+        NgSimpleToastModule
       ],
       ...
     })
@@ -21,7 +21,7 @@ Simple Angular Toast Notification Module
 
 3. Use via call `open()` method of `ToastService`:
     ```typescript
-    import { ToastService } from './discovergy-toast/services/toast.service';
+    import { ToastService } from './ng-simple-toast/services/toast.service';
     
     @Component({
       selector: 'app-root',
@@ -86,8 +86,8 @@ this.toastService.open({
 
 ## Demo
 
-**[Show demo](https://adrenalines.github.io/discovergy-toast/)**
-**[Show demo on Stackblitz](https://stackblitz.com/github/Adrenalines/discovergy-toast)**
+**[Show demo](https://adrenalines.github.io/ng-simple-toast/)**
+**[Show demo on Stackblitz](https://stackblitz.com/github/Adrenalines/ng-simple-toast)**
 
 
 ## Development of this module
@@ -95,7 +95,7 @@ this.toastService.open({
 ### Development server
 
 For run:
-1. Clone this repo: `git clone git@github.com:Adrenalines/discovergy-toast.git`
+1. Clone this repo: `git clone git@github.com:Adrenalines/ng-simple-toast.git`
 2. Install packages: `npm i`
 3. Run angular dev server: `npm run start`.
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
