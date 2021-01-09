@@ -4,7 +4,7 @@
       [ngClass]="['toasts-container', toasts[toasts.length - 1].position || defaultPosition]"
     >
       <div *ngFor="let toast of toasts | slice:0:toasts[toasts.length - 1].max || defaultMax">
-        <app-toast [toast]="toast" (deleteToast)="deleteToast()"></app-toast>
+        <app-toast [toast]="toast" (deleteToast)="deleteToast($event)"></app-toast>
       </div>
       <div
         *ngIf="toasts.length > (toasts[toasts.length - 1].max || defaultMax)"

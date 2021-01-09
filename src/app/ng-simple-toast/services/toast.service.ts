@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UserToast } from '../models';
+import { Toast, UserToast } from '../models';
 import { ToastListService } from './toast-list.service';
 import { ToastLoadingService } from './toast-loading.service';
 
@@ -18,7 +18,7 @@ export class ToastService {
       return;
     }
 
-    const newToasts = this.toastListService.toasts.getValue();
+    const newToasts: Toast[] = this.toastListService.toasts.getValue();
     newToasts.push({ ...toast, id: Date.now() });
     this.toastListService.toasts.next(newToasts);
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { UserToast } from '../models';
+import { Toast } from '../models';
 import { DEFAULT_MAX, DEFAULT_POSITION } from '../defaults';
 import { ToastListService } from '../services/toast-list.service';
 
@@ -10,7 +10,7 @@ import { ToastListService } from '../services/toast-list.service';
   styleUrls: ['./toasts.component.scss']
 })
 export class ToastsComponent implements OnInit {
-  public toasts: BehaviorSubject<UserToast[]>;
+  public toasts: BehaviorSubject<Toast[]>;
   public defaultPosition = DEFAULT_POSITION;
   public defaultMax = DEFAULT_MAX;
 
@@ -21,8 +21,8 @@ export class ToastsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public deleteToast(): void {
-    this.toastListService.deleteToast();
+  public deleteToast(toast: Toast): void {
+    this.toastListService.deleteToast(toast);
   }
 
 }

@@ -10,9 +10,8 @@ export class ToastListService {
 
   constructor() { }
 
-  public deleteToast(): void {
-    const newToasts = this.toasts.getValue();
-    newToasts.shift();
+  public deleteToast(deletedToast: Toast): void {
+    const newToasts: Toast[] = this.toasts.getValue().filter(toast => toast.id !== deletedToast.id);
     this.toasts.next(newToasts);
   }
 }
