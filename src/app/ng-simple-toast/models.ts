@@ -1,4 +1,4 @@
-export interface Toast {
+export interface UserToast {
   heading: string;
   subheading?: string;
   message: string;
@@ -6,6 +6,10 @@ export interface Toast {
   timeout?: number;
   position?: ToastPositions;
   max?: number;
+}
+
+export interface Toast extends UserToast {
+  id: number;
 }
 
 export enum ToastPositions {

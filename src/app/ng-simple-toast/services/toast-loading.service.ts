@@ -7,7 +7,7 @@ import {
   Injector
 } from '@angular/core';
 import { ToastsComponent } from '../toasts/toasts.component';
-import { Toast } from '../models';
+import { UserToast } from '../models';
 import { ToastListService } from './toast-list.service';
 
 @Injectable({
@@ -32,7 +32,7 @@ export class ToastLoadingService {
 
     this.toastsComponentRef = componentRef;
 
-    const sub = this.toastListService.toasts.subscribe((toasts: Toast[]) => {
+    const sub = this.toastListService.toasts.subscribe((toasts: UserToast[]) => {
       if (this.toastsComponentRef && !toasts.length) {
         this.destroyComponent();
         sub.unsubscribe();

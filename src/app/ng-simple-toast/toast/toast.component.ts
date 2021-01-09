@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { SubscriptionLike, timer } from 'rxjs';
-import { Toast } from '../models';
+import { UserToast } from '../models';
 import { DEFAULT_TIMEOUT } from '../defaults';
 
 @Component({
@@ -9,7 +9,7 @@ import { DEFAULT_TIMEOUT } from '../defaults';
   styleUrls: ['./toast.component.scss']
 })
 export class ToastComponent implements OnInit, OnDestroy {
-  @Input() public toast: Toast = {} as Toast;
+  @Input() public toast: UserToast = {} as UserToast;
   @Output() private deleteToast = new EventEmitter<null>();
   private tick: SubscriptionLike;
 
