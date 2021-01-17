@@ -10,14 +10,14 @@ import { DEFAULT_TIMEOUT } from '../defaults';
 })
 export class ToastComponent implements OnInit, OnDestroy {
   @Input() public toast: Toast = {} as Toast;
-  @Output() private deleteToast = new EventEmitter<Toast>();
+  @Output() private deleteToast = new EventEmitter<number>();
   private tick: SubscriptionLike;
 
   constructor() { }
 
   ngOnInit(): void {
     this.tick = timer(this.toast?.timeout || DEFAULT_TIMEOUT).subscribe(
-      () => this.deleteToast.emit(this.toast)
+      () => this.deleteToast.emit(this.toast.id)
     );
   }
 

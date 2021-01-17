@@ -21,8 +21,8 @@ export class ToastsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public deleteToast(toast: Toast): void {
-    this.toastListService.deleteToast(toast);
+  public deleteToast(toastId: number): void {
+    this.toastListService.deleteToast(toastId);
   }
 
 }
